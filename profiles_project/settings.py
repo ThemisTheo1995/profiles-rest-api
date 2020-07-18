@@ -25,7 +25,10 @@ SECRET_KEY = '(xxtv4nns+6#qi(4@onbf@rosney408vb!v3nh9&@@r!$44%k6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(int(os.environ.get('DEBUG', 1)))
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'ec2-3-8-159-207.eu-west-2.compute.amazonaws.com',
+    '127.0.0.1'
+    ]
 
 
 # Application definition
@@ -121,4 +124,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
 AUTH_USER_MODEL = 'profiles_api.UserProfile'
+
+STATIC_ROOT = 'static/'
